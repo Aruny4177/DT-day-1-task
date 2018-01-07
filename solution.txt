@@ -1,0 +1,233 @@
+Q.1)   Can abstract class have constructors in Java?
+Ans)   yes an abstract class have constructors in java.you can either explicity provide constructuor to abstract class or 
+       if you don't compare will add default constructor of no argument in abstract class. this is true for all classes 
+       and its  also applies on abstract class.
+
+
+Q.2)  Can abstract class implements interface in Java? do they require to implement all methods?
+Ans)  yes abstract class can implement interface by using implements keyword.they don't need to implement all methods.
+
+Q.3)  Can abstract class be final in Java?
+Ans)  no because the purpose of using both are opposite to each other.abstract class must have to get instantiated to become 
+      concrete,where as final class should not get subclassed.
+
+Q.4)  Can abstract class have static methods in Java?
+Ans)  no we cannot declare a static method in abstract class.because we cannot create a instance of abstract class.
+
+Q.5)  Can you create instance of abstract class?
+Ans)  no we cannot create an instance of an abstract class because it does not have a complelte implementation.
+
+
+Q.6)  Is it necessary for abstract class to have abstract method?
+Ans)  yes it is necessary to declare abstract method in abstract class.
+
+
+Q.7)  Difference between abstract class and interface in Java?
+Ans)  Abstract Class:-
+      a- abstract class is clas which conatain one or more abstract methods,which has to be implemented by its sub classes.
+      b- abstract class is a class prefix with an abstract keyowrd follwed by class definition.
+      c- abstract class can also contain concrete methods.
+      Interface:-
+      a- the classes which implement the interfaces must provide the method definition for all the methods.
+      b- interface is a pure abstract class which starts with iterface keyword.
+      c- interface contains all abstract method and final variable declarations.
+
+Q.8)  When do you favor abstract class over interface?
+Ans)  abstract class have both concrete and abstract function.and interface have only abstraction method.
+
+Q.9)  What is abstract method in Java?
+Ans)  Method that are declare without any body within an abstract class are called abstract method.method body will be
+      defined by its subclass.
+
+Q.10) Can abstract class contains main method in Java ?
+Ans)  yes because main() method is concrete method and abstract method allow concrete method.
+
+Q.11) what is static block in java?
+Ans)  static block is used for intializing the static variables.this block gets excuted when  the class is loaded in the memory
+      a class can have multiple static blocks .
+
+
+Q.12) What is the need of static block?
+Ans)  static block is used for initialzing variables.block gets executed when the class is loaded in the memory.
+
+Q.13) Can we overload static methods in java?
+Ans)  static method cannot be overridden because they are not dispatched on the object instance at runtime.
+
+Q.14) Can we call super class static methods from sub class?
+Ans)  If you want to call static method of a class we can call directly from another static method or by using its class
+      name we can call static method of that class. 
+
+Q.15) What is the difference between final and static keywords?
+Ans)  Final keywords:-
+      final keyword is applicable to class, methods and variables.it is compulsory to initialize the final variable at the
+      time of its declaration.final method cannot be inherited.final keyword supports no such block.
+      Static keyword:-
+      Static keyword is applicable to nested static class,variaable,methods and block.it is compulsory to initialize the 
+    static variable at the  time of its declaration.static members can only access the static members of the class.static block 
+    is used to initialize the static variables.
+
+Q.16) Write a note on covariant return type with example code.
+Ans)  covariant return type specifies that the return type may vary in the same direction  as the subclass.
+      Example:-
+        class A{
+	A get(){
+	return this;
+	}
+	}
+	class B extends A{
+	b get()
+	{return this;}
+	void message()
+		{
+		 System.out.println("welcome");
+		}
+	public static void main(String args[]){
+	 new b().get().message();
+	}	
+	}
+
+Q.17) Write a note on Enum with example code.
+Ans)  Enum is keyword for creating a Enumeration .it means a list of named constant.it define a class type.
+      Example:-
+      enum weekdays
+      {sun,mon,tues,wed,thurs,fri,sat }
+      class Test
+      {
+        public static void main(string args[])
+	{
+	  weekdays wk;
+          wk=weekdays.sun;
+          System.out.println("Today is"+wk);
+	}
+      }
+
+Q.18) Write a note on use of super keyword and super() method.
+Ans)  super keyword can be used to call immediate parent class.
+
+Q.19) Write a code to implement abstraction using interface.
+Ans)  class abc
+      {
+        public static void main(String args[])
+        {
+         twowheeler ob=new honda();
+         test.run();
+        }
+      }
+
+       abstract class twowheeler
+       {
+         public abstract void run();
+       }
+       class honda extends twowheeler
+       {
+        public void run()
+        {
+         System.out.println("running....");
+        }
+       }
+
+Q.20) Write a Java program to sort a numeric array and a string array.
+Ans)  import java.util.Arrays;
+      public class abc
+      { 
+        public static void main (String []args)
+        { 
+          int [] arr={1789,2035,1899,1456,2013,1458,2458};
+          String [] arr1={"java","python","php","c#","c","c++"};
+          
+          System.out.println("Original numeric array :"+Arrays.toString(arr));
+          Arrays.sort(arr);
+          System.out.println("Original numeric array :"+Arrays.toString(arr));
+          
+          System.out.println("Original numeric array :"+Arrays.toString(arr1));
+ 	  Arrays.sort(arr1);
+          System.out.println("Original numeric array :"+Arrays.toString(arr1));
+        }
+       }
+ 
+Q.21) Write a Java program to sum values of an array.
+Ans)  import java.util.Scanner;
+      class abc
+      {
+       public static void main(String[] args)
+       {Scanner sc=new Scanner(System.in);
+        int arr[]=new int arr[5];
+         int sum=0;
+         for(int i=0;i<5;i++)
+	{
+	arr[i]=sc.nextInt();	
+	}
+	for(int i:arr)
+        sum+=i;
+        System.out.println("sum"+sum);
+      }
+	}    
+
+Q.22) Write a Java program to remove a specific element from an array.
+Ans)  import java.util.Arrays;
+      public class abc
+      { 
+        public static void main (String []args)
+        { 
+          int [] arr={25,14,52,87,15,45};
+          
+          System.out.println("Original numeric array :"+Arrays.toString(arr));
+          int rmve=1;
+          int length=arr.length;
+          for(int i=rmve;i<length-1;i++){
+           arr[i] =arr[i+1];
+          }
+         System.out.println("After removeing the sec element"+Arrays.toString(arr));
+        }
+       }
+
+
+Q.23) Write a Java program to reverse an array of integer values.
+Ans)  import java.util.Arrays;
+      class abc{
+       public static void main(String [] args)
+	{
+        int [] arr={25,14,52,87,15,45};
+         int length=arr.length;
+        System.out.println("Original array"+Arrays.toString(arr));
+        for(int i=0;i<length/2;i++)
+        {
+            int temp=arr[i];
+            arr[i]=arr[length-i-1];
+            arr[length-i-1]=temp;
+        }
+       System.out.println("reverse of array"+Arrays.toString(arr));
+        }
+      }
+
+
+Q.24) Write a Java program to find the duplicate values of an array of integer values.
+Ans)   import java.util.Arrays;
+      class abc{
+       public static void main(String [] args)
+	{
+	    int [] arr={25,14,15,52,25,14,87,15,45};
+	     int length=arr.length;
+		for(int i=0;i<length-1;i++)
+		{
+		  for(int j=0;j<length;j++)
+		  {
+		   if((arr[i]==arr[j] && (i!=j)))	
+		    { 
+			System.out.println("Duplicate value"+arr[j]);		}
+		    }
+                  }
+                }
+
+	}}
+
+
+
+
+
+
+
+
+
+ 
+  
