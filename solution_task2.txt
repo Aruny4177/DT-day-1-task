@@ -1,0 +1,693 @@
+Q1. Write 3 different java programs to print the following patterns
+Ans a).
+public class a {
+
+	public static void main(String[] args) {
+		for(int i=1;i<=5;i++)
+		{
+			if(i==4){
+				
+			}else{
+			for(int j=1;j<=i;j++)
+			{
+				System.out.print(j);
+			}System.out.println();}
+		}
+
+	}
+
+}
+
+b).
+public class Q1b {
+
+	public static void main(String[] args) {
+        
+		for(int i=1;i<=5;i++)
+		{
+			for(int j=5;j>=i;j--)
+			{
+				System.out.print(j);
+			}System.out.println();
+		}
+
+	}
+
+}
+
+c).
+public class diamond {
+
+	public static void main(String[] args) {
+		
+		   for (int i = 1; i < 10; i += 2) {
+			      for (int j = 0; j < 9 - i / 2; j++)
+			        System.out.print(" ");
+
+			      for (int j = 0; j < i; j++)
+			        System.out.print("*");
+
+			      System.out.println();
+			    }
+
+			    for (int i = 7; i > 0; i -= 2) {
+			      for (int j = 0; j < 9 - i / 2; j++)
+			        System.out.print(" ");
+
+			      for (int j = 0; j < i; j++)
+			        System.out.print("*");
+
+			      System.out.println();
+			    }
+			 
+	}
+
+}
+
+
+Q2. Write a java program to take the input from user and determine if it is a prime number or not.
+Ans.package Q2;
+
+import java.util.Scanner;
+
+public class prime {
+
+	public static void main(String[] args) {
+		
+		 int num, i, count=0;
+	        Scanner scan = new Scanner(System.in);
+			
+	        System.out.print("Enter a Number to find its a  prime number or not : ");
+	        num = scan.nextInt();
+			
+	        for(i=2; i<num; i++)
+	        {
+	            if(num%i == 0)
+	            {
+	                count++;
+	                break;
+	            }
+	        }
+	        if(count == 0)
+	        {
+	            System.out.print(num+"This is a Prime Number");
+	        }
+	        else
+	        {
+	            System.out.print(num+"This is not a Prime Number");
+	        }
+
+	}
+
+}
+
+Q5.  Write Java program to check if a name is palindrome.
+Ans. package Q4;
+
+import java.util.Scanner;
+
+public class pali {
+
+	public static void main(String[] args) {
+		
+		  String str, rev = "";
+	      Scanner sc = new Scanner(System.in);
+	 
+	      System.out.println("Enter a Name:");
+	      str = sc.nextLine();
+	 
+	      int length = str.length();
+	 
+	      for ( int i = length - 1; i >= 0; i-- )
+	         rev = rev + str.charAt(i);
+	 
+	      if (str.equals(rev))
+	         System.out.println(str+" is a palindrome");
+	      else
+	         System.out.println(str+" is not a palindrome");
+	 
+		
+	}
+
+}
+
+
+Q6.Write Java program to check if a number is Armstrong number or not? (input 153 output true,  123 output false)
+Ans. package Q6;
+
+import java.util.Scanner;
+
+public class arms {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);  
+		int c=0,a,temp;  
+		  System.out.println("Enter the number to find Armstrong number");  
+		  int n =sc.nextInt();
+		    temp=n;  
+		    while(n>0)  
+		    {  
+		    a=n%10;  
+		    n=n/10;  
+		    c=c+(a*a*a);  
+		    }  
+		    if(temp==c)  
+		    System.out.println("armstrong number");   
+		    else  
+		        System.out.println("Not armstrong number");   
+ 
+	}
+
+}
+
+
+Q7.How to find factorial of number in Java using iteration?
+Ans. package Q7;
+
+import java.util.Scanner;
+
+public class iter {
+
+	public static void main(String[] args) {
+		 Scanner scanner = new Scanner(System.in);
+	       System.out.print("Enter the number to find  factorial : ");
+	       int num = scanner.nextInt();
+	       int result = 1;
+	       for (int i = 1; i <= num; i++) {
+	           result = result * i;
+	       }
+	       System.out.println("The factorial of"+num+ "is " + result);
+	       
+	   }
+
+
+
+
+}
+
+Q8.Write a Java code to take a character as a input from user and determine if it is a vowel or a consonant using conditional construct.
+Ans.  package Q8;
+
+import java.util.Scanner;
+
+public class Conditional {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter the Charater to find vowel and consonant");
+		char ch=sc.next().charAt(0);
+		
+		if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+		{
+			System.out.println(ch+" is a Vowel");
+		}
+		else
+		{
+			System.out.println(ch+" is a Consonant");
+		}
+
+	}
+
+}
+
+
+Q.9. Write a switch case java code to create calculator with + - / * functionalities only.
+Ans. package Q9;
+
+import java.util.Scanner;
+
+public class calculator {
+
+	public static void main(String[] args) {
+     
+		Scanner Sc =new Scanner(System.in);
+		
+		int num1,num2,res;
+		String opr;
+		System.out.println("Enter first number");
+		num1=Sc.nextInt();
+		System.out.println("Enter second number");
+		num2=Sc.nextInt();
+		System.out.println("Enter the arthmetic operator from +,-,*,/");
+		opr=Sc.next();
+        
+		
+		switch(opr)
+		{
+		   case "+":  res=num1+num2;
+			          System.out.println("Addition :-  "+res);
+		   break;
+		   case "-": res=num1-num2;
+		             System.out.println("Substraction :- "+res);
+		   break;
+		   case "*": res=num1*num2;
+		             System.out.println("Multiplication :- "+res);
+		   break;
+		   case "/": res=num1/num2;
+		             System.out.println("Dived :- "+res);
+		    break;
+		    default:System.out.println("please input valid operator");
+		}
+	}
+
+}
+
+Q10. Write a java code to copy one array into another.
+Ans. package Q10;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class copyarray {
+
+	public static void main(String[] args) {
+		
+		Scanner sc= new Scanner(System.in);
+		
+		int [] arr=new int [5];
+		int [] arr1;
+		System.out.println("Enter the number for first array");
+		 for(int i=1;i<5;i++)
+		 {
+			 arr[i]=sc.nextInt();
+		 }
+		 System.out.println("First array "+Arrays.toString(arr));
+		 
+		 arr1 = Arrays.copyOf(arr, arr.length);//this will copy in arr1
+		 System.out.println("Copy of First Array in second array");
+				 System.out.println(Arrays.toString(arr1));
+		
+
+	}
+
+}
+
+
+Q.12. Write a java code to display a reverse String array.
+Ans.  package Q12;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Reversearray {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		int size;
+		System.out.println("Enter the szie of an array");
+		size=sc.nextInt();
+		String arr[]=new String [size];
+		
+		for(int i=0;i<size;i++)
+		{
+			arr[i]=sc.next();
+		}
+		System.out.println("Original String Array :-"+Arrays.toString(arr));
+		for(int i=0;i<size/2;i++)
+		{
+			String temp=arr[i];
+			arr[i]=arr[size-i-1];
+			arr[size-i-1]=temp;
+		}
+		System.out.println("Reverse String Array :"+Arrays.toString(arr));
+		
+
+	}
+
+}
+
+
+
+Q.13.   Write the difference between checked and unchecked exception with example code
+Ans.    Checked Exception:- The exception that can be predicted by the programmer at the compile time.Example : File that need to be opened is not found. These type of         exceptions must be checked at compile time.
+        Example:-  package Exception;
+
+                   import java.io.FileInputStream;
+                   import java.io.FileNotFoundException;
+
+                   public class catchexcpetion 
+                   {
+	             public static void main(String[] args) 
+			{		
+		           FileInputStream fis = null;
+		           try
+                            {
+		               fis = new FileInputStream("C:/myfile.txt"); 
+		            }
+                            catch(FileNotFoundException fnfe)
+                            {
+ 	                      System.out.println("The specified file is not present at the given path");
+		            }
+	                 }
+
+                   }
+
+
+
+        Unchecked Exception :- Unchecked exceptions are the class that extends RuntimeException. Unchecked exception are ignored at compile time. Example :                     ArithmeticException, NullPointerException, Array Index out of Bound exception. Unchecked exceptions are checked at runtime.
+        Example:-  package Exception;
+
+		   public class uncexcption 
+		   {
+	     	    public static void main(String[] args) 
+   		    {
+		      try
+  			{
+	   	           int arr[] ={1,2,3,4,5};
+	   	           System.out.println(arr[7]);
+			}
+	              catch(ArrayIndexOutOfBoundsException e)
+ 			{
+	  	           System.out.println(e);
+	               }
+	  	    }
+		  }
+
+
+Q.14.  Write the difference between throw and throws with example code
+Ans.   throw :-  *throw keyword is used to throw an exception explicitly.
+  		 *throw keyword is followed by an instance of Throwable class or one of its sub-classes.
+		 *throw keyword is declared inside a method body.
+  Example:-
+package q14;
+
+public class thrw {
+
+	public static void main(String[] args) {
+		 try
+		  {
+		   throw new ArithmeticException("demo");
+		  }
+		  catch(ArithmeticException e)
+		  {
+		   System.out.println("Exception caught");
+		  }
+
+	}
+
+}
+
+throws:-  *throws keyword is used to declare an exception possible during its execution.
+          *throws keyword is followed by one or more Exception class names separated by commas.
+          *throws keyword is used with method signature (method declaration)
+Example:- 
+package q14;
+
+public class thrws {
+
+	public static void main(String[] args) {
+		 try
+		  {
+		   check();
+		  }
+		  catch(ArithmeticException e)
+		  {
+		   System.out.println("caught" + e);
+		  }
+
+ 		}
+	 static void check() throws ArithmeticException
+	 {
+	  System.out.println("Inside check function");
+	  throw new ArithmeticException("demo");
+	 }
+	}
+
+
+15.   Write a note or nested try…catch block with example code
+Ans.  Nested try statement:-  try statement can be nested inside another block of try. Nested try block is used when a part of a block may cause one error while entire block may cause another error. In case if inner try block does not have a catch handler for a particular exception then the outer try catch block is checked for match.
+
+
+class Excep
+{
+ public static void main(String[] args)
+ {
+  try
+  {
+   int arr[]={5,0,1,2};
+   try
+   {
+    int x=arr[3]/arr[1];
+   }
+   catch(ArithmeticException ae)
+   {
+    System.out.println("divide by zero");
+   }
+   arr[4]=3;
+  }
+  catch(ArrayIndexOutOfBoundsException e)
+  {
+   System.out.println("array index out of bound exception");
+  } }}
+
+
+16.   Write a note on MultiThreading and MultiTasking
+Ans.  MultiThreading:-A program can be divided into a number of small processes. Each small process can be addressed as a single thread (a lightweight process).
+      MultiTasking:- its ability to perform more than one activity concurently on a computer.it is a process based and thread based .
+
+
+18.   Write a short note on Generics an all types of Parameters used in Generics with example code.
+Ans.  Before generics, we can store any type of objects in collection i.e. non-generic. Now generics, forces the java programmer to store specific type of objects.
+       Example:-
+
+package collection;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
+public class collection {
+
+	public static void main(String[] args) {
+		ArrayList al=new ArrayList();
+        al.add(45);
+        al.add(67);
+        al.add("ravi");
+        
+        Iterator itr=al.iterator();
+        while(itr.hasNext())
+        {
+        	System.out.println(itr.next());
+        }
+	}
+
+}
+
+
+19.   Write a short note on Map Interface.
+Ans.  map is a spearte part of paskage .map is useful if you have to search, update or delete elements on the basis of key.
+
+20.   Write the difference between LinkedList and ArrayList.
+Ans.  LinkedList:- It is better for manipulating data.LinkedList internally uses doubly linked list to store the elements.
+
+ArrayList:- It is better for storing and accessing data.ArrayList internally uses dynamic array to store the elements.
+*in array there is limition but in arraylist no limition is there we can store multiple data in arraylist.
+
+
+21.   Write a note on Dynamic array in java.
+Ans.  A dynamic array has variable size and allows elements to be added or removed.  For this, we can allocate a fixed-size array and divide it into two parts:
+
+* the first part stores the elements of the dynamic array and
+* the second part is reserved, but not used.
+
+
+22.   What is the purpose of the System class?
+Ans.  The java.lang.System class contains several useful class fields and methods. It cannot be instantiated.Facilities provided by System -
+      standard output ,error output streams etc.
+
+
+23.   Which is the abstract parent class of FileWriter ?
+Ans.  OutputStreamWriter
+
+24.   Which class is used to read streams of characters from a file?
+Ans.   Character Stream. character streams but the most frequently used classes are, FileReader and FileWriter
+
+25.   Which class is used to read streams of raw bytes from a file?
+Ans.  Input Stream
+
+
+26.   What are the differences between FileInputStream/FileOutputStream and RandomAccessFile
+Ans.   FileInputStream/FileOutputStream:- 
+The File class is used to perform the operations on files and directories of the file system of an operating system. This operating system is the platform for the java application that uses the File class objects. The contents of the files cannot be read or write.
+ RandomAccessFile:-
+The RandomAccessFile class has methods that perform the direct access to data of any part of the file. RandomAccessFile class also provides the facilities to read and write data from a single file without closing the streams for each read or write. It provides the facilities to write primitive data to the files.
+
+27.   Write a note on Channels and Buffer with example.
+Ans.  Channels :- Channels are portals through which I/O transfers take place, and buffers are the sources or targets of those data transfers.Buffers work with channels
+Buffers:- Buffers provide a mechanism to store a fixed amount of primitive data elements in an in-memory container. In the NIO, all data is handled with buffers. When data is read, it is read directly into a buffer. When data is written, it is written into a buffer
+
+28.   What is the difference between System.out ,System.err and System.in?
+Ans.  System.out is used to display normal messages 
+      System.err is used to display error messages
+       System.in represents InputStream object
+
+
+29.   What is the purpose of the System class?
+Ans.  Same ans Question no 22
+
+30.   Which is the abstract parent class of FileWriter ?
+Ans.  Same ans Question no 23
+
+31.   Which class is used to read streams of characters from a file?
+Ans.  Same ans Question no 24
+
+32.   Which class is used to read streams of raw bytes from a file?
+Ans.  Same ans Question no 25
+
+33.   What are the differences between FileInputStream/FileOutputStream and RandomAccessFile
+Ans.  Same ans Question no 26
+
+34.   Write a note on Channels and Buffer with example
+Ans.  Same ans Question no 27
+
+35.   Write a note on PreparedStatement and ResultSetMetaData interfaces with code snippets.
+Ans.  PreparedStatement interface is a subinterface of Statement. It is used to execute parameterized query
+      Code:-
+package q35;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+
+public class prestmnt {
+
+	public static void main(String[] args) {
+		try{  
+			
+			  
+			Connection con=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/dt","sa","");  
+			  
+			PreparedStatement stmt=con.prepareStatement("insert into Emp values(?,?)");  
+			stmt.setInt(1,101);
+			stmt.setString(2,"Ratan");  
+			  
+			int i=stmt.executeUpdate();  
+			System.out.println(i+" records inserted");  
+			  
+			con.close();  
+			  
+			}catch(Exception e){ System.out.println(e);}  
+			  
+	}
+
+}
+
+
+ResultSetMetaData:-  ResultSetMetaData interface is useful because it provides methods to get metadata from the ResultSet object.
+
+Code:-
+package q35;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+
+public class resmtadata {
+
+	public static void main(String[] args) {
+		try{  
+			
+			Connection con=DriverManager.getConnection("jdbc:h2:tcp://localhost/~/dt","sa","");  
+			  
+			PreparedStatement ps=con.prepareStatement("select * from niit");  
+			ResultSet rs=ps.executeQuery();  
+			ResultSetMetaData rsmd=rs.getMetaData();  
+			  
+			System.out.println("Total columns: "+rsmd.getColumnCount());  
+			System.out.println("Column Name of 1st column: "+rsmd.getColumnName(1));  
+			System.out.println("Column Type Name of 1st column: "+rsmd.getColumnTypeName(1));  
+			  
+			con.close();  
+			}catch(Exception e){ System.out.println(e);}  
+		
+
+	}
+
+}
+
+
+
+
+
+36.   Write a note on DDL, DML, DQL, DDL with code snippets.
+Ans.  DDL (Data Definition Language):- it isused to alter/modify a database or table structure and schema.
+      CREATE – create a new Table, database, schema
+	ALTER – alter existing table, column description
+	DROP – delete existing objects from database
+
+DML (Data Manipulation Language):- selecting a few records from a table, inserting new records, deleting unnecessary records, and updating/modifying existing records.
+SELECT – select records from a table
+INSERT – insert new records
+UPDATE – update/Modify existing records
+DELETE – delete existing records
+
+DQL (Data Query Language):- it is used to retrieve data from the database are collectively called as DQL.Select statements comes under DQL.
+
+
+
+
+37.   Write a note on HTML , CSS and Javascript.
+Ans.  HTML(HyperText Markup Language):-html is used for building web page.it conatain building block for web page.Structured through use of HTML tags.
+      CSS(Cascading Style Sheets):- It is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents.
+                      Style can be apllied in three ways:-1)InLine Style 2)Internal Style 3) External Style.
+     Javascript:-JavaScript (or JS, as the cool coders call it) adds interactivity to websites. To be specific, JS is a client-side scripting language, which means the scripts are running directly in the user’s browser (the browser being the client).
+
+38.   Write a code to fetch the data from H2 and put it in any collection object and display it.
+Ans.  package Q45;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class fetxhdata {
+
+	public static void main(String[] args) {
+		
+		Scanner sc= new  Scanner(System.in);
+		String url="jdbc:h2:tcp://localhost/~/dt";
+		String usrname="sa";
+		String pass="";
+		String query="select * from niit";
+		
+		ArrayList<String> dat= new ArrayList<>();
+		
+		 try{
+		 Connection con=DriverManager.getConnection(url,usrname,pass);
+		 Statement st=con.createStatement();
+				
+				 ResultSet rs=st.executeQuery(query);
+				
+				 
+		 
+			 while(rs.next())
+			 {
+				 String col1=rs.getString(1);
+				 String col2=rs.getString(2);
+			         dat.add(col1+col2);
+   
+			 }
+			 
+		 }
+		 catch(Exception e){
+			 e.printStackTrace();
+		 }
+
+		for(String n:dat)
+		{
+			System.out.println(n);
+		}
+	}
+
+}
+
+
+
+
+
+
