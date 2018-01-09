@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<title>NIIT DT task3</title>
+<link href="download.png" rel="icon"></link>
+<script language="javascript" type="text/javascript" src="script.js"></script>
+<script>
+function check1()
+{
+var productID=document.getElementById("pro").value;
+var productName=document.getElementById("proname").value;
+var productPrice=document.getElementById("proprc").value;
+var productQnty=document.getElementById("proqunty").value;
+if(productID==""|| productName=="" ||productPrice=="" ||productQnty=="")
+{
+alert("please fill all the block");
+}
+else
+{
+//window.open('productdisplay.html');
+document.write("<fieldset style='background:lightblue'><legend><h1>Product Display</h1></legend><center><table><tr><td>ProductID</td><td>"+productID+"</td></tr><tr><td>ProductName</td><td>"+productName+"</td></tr><tr><td>ProductPrice</td><td>"+productPrice+"</td></tr><tr><td>ProductQuantity</td><td>"+productQnty+"</td></tr></table></center></fieldset>");
+}
+}
+</script>
+
+</head>
+<body style="background:lightblue">
+<fieldset>
+<legend><h1>Product Page</h1></legend>
+<center>
+<table>
+<form onsubmit="return check1();">
+<tr>
+	<td>ProductID &nbsp; : </td><td><input type="text" id="pro" placeholder="ProductID"></td>
+</tr>
+<tr>
+	<td>ProductName &nbsp; &nbsp;&nbsp;: </td><td><input type="text" id="proname" placeholder="ProductName"></td>
+</tr>
+<tr>
+	<td>ProductPrice &nbsp; &nbsp;&nbsp;: </td><td><input type="number" id="proprc" placeholder="ProductPrice"></td>
+</tr>
+<tr>
+	<td>ProductQuantity &nbsp; &nbsp;&nbsp;: </td><td><input type="number" id="proqunty" placeholder="ProductQuantity"></td>
+</tr>
+
+
+<td></td><td><input type="submit"></td>
+	
+</form>
+</table>
+</center>
+</fieldset>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<title>NIIT DT task3</title>
+<link href="download.png" rel="icon"></link>
+<script>
+function check()
+{
+var productID=document.getElementById("pro").value;
+var productName=document.getElementById("proname").value;
+var productPrice=document.getElementById("proprc").value;
+var productQnty=document.getElementById("proqunty").value;
+
+
+}
+</script>
+
+</head>
+<body>
+<fieldset>
+<legend><h1>Product Page</h1></legend>
+<center>
+<table>
+<form onsubmit="return check();">
+<tr>
+	<td>ProductID &nbsp; : </td><td><span id="p"></span></td>
+</tr>
+<tr>
+	<td>ProductName &nbsp; &nbsp;&nbsp;: </td><td><span id="p2"></span></td>
+</tr>
+<tr>
+	<td>ProductPrice &nbsp; &nbsp;&nbsp;: </td><td><span id="p3"></span></td>
+</tr>
+<tr>
+	<td>ProductQuantity &nbsp; &nbsp;&nbsp;: </td><td><span id="p4"></span></td>
+</tr>
+
+
+<td></td><td><input type="submit"></td>
+	
+</form>
+</table>
+</center>
+</fieldset>
+</body>
+</html>

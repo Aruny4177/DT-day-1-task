@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<title>NIIT DT task3</title>
+<link href="download.png" rel="icon"></link>
+ 
+<script>
+function check()
+{
+var un=document.getElementById("un").value;
+var pwd=document.getElementById("pwd").value;
+if(un=="niit@.com" && pwd=="niit@12")
+{
+alert("welcome");
+ window.open('product.html');
+}
+else{
+alert("your username and password was incorrect");
+}
+}
+</script>
+
+</head>
+<body style="background:lightblue">
+<fieldset>
+<legend><h1>Login Page</h1></legend>
+<center>
+<table>
+<form onsubmit="return check();">
+<tr>
+	<td>UserName &nbsp; : </td><td><input type="text" id="un" placeholder="UserName"></td>
+</tr>
+<tr>
+	<td>Password &nbsp; &nbsp;&nbsp;: </td><td><input type="Password" id="pwd" placeholder="password"></td>
+</tr>
+<td></td><td><input type="submit"></td>
+	
+</form>
+</table>
+</center>
+</fieldset>
+</body>
+</html>
