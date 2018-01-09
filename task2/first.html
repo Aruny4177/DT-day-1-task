@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>NIIT DT task3</title>
+<link href="download.png" rel="icon"></link>
+<script language="javascript" type="text/javascript" src="script.js"></script>
+
+
+<style>
+td
+{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+</style>
+
+</head>
+<body style="background:lightblue">
+<fieldset><legend><h1>Transaction Details</h1></legend>
+<form onsubmit="return check();">
+<center><table>
+    <tr>
+		<td>TransactionID</td><td><input type="number" placeholder="TransactionID" id="tid"></td>
+	</tr>
+	<tr>
+		<td>ProductName</td><td><input type="text" placeholder="ProductName" id="pn"></td>
+	</tr>
+	<tr>
+		<td>Productprice</td><td><input type="number" placeholder="ProductPrice" id="pp"></td>
+	</tr>
+	<tr>
+		<td>ProductQuantity</td><td><input type="number" placeholder="ProductQuantity" id="pq"></td>
+	</tr>
+	<tr>
+		<td>CustomerName</td><td><input type="text" placeholder="CustomerName" id="cn"></td>
+	</tr>
+	<tr>
+		<td>CustomerGender</td><td><input type="radio" name="gender" value="male">Male<br><input type="radio" name="gender" value="female">Female</td>
+	</tr>
+	<tr>
+		<td>CustomerDOB</td><td><input type="Date"  id="dob"></td>
+	</tr>
+	<tr>
+		<td>CustomerCity</td><td><input type="text" placeholder="CustomerCity" id="cc"></td>
+	</tr>
+	<tr>
+		<td>CustomerState</td><td><input type="text" placeholder="CustomerState" id="st"></td>
+	</tr>
+	<tr>
+		<td>CustomerCountry</td><td><select id="cco"><option>Select Your Country</option><option value="India">India</option><option value="U.S">U.S</option></td>
+	</tr>
+	<tr>
+		<td><input type="reset" value="Clear"></td><td><input type="submit" value="Submit"></td>
+	</tr>
+	
+</table></center></form></fieldset>
+</body>
+</html>
