@@ -1,0 +1,6 @@
+2nd task for today
+----------------------------
+1. Create a website with an image on left and a paragraph on right.
+2. 2 buttons , each below the image and the paragraph
+3. When button1 is clicked , the image will increase in height and width and also become 50% opaque.
+4. When button2 is clicked, the paragraph will get hidden and on clicking the button2 second time the paragraph will reappear.

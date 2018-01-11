@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script>
+$(document).ready(function ()
+		{
+	$("#bt2").click(function (){
+		$("p").toggle();
+		
+		
+	});
+	$("#bt").click(function (){
+		$("#img").css({"height":"600","width":"800","opacity":"0.5"});
+		
+		
+	});
+	
+		});
+		
+</script>
+<title>task2</title>
+</head>
+<body>
+<div class="container">
+<img src="NIIT-DT-banner.jpg" id="img" class="img-fluid float-left" height="350" width="500">
+<p class="text-right">NIIT is a market leading, global learning outsourcing company which provides a comprehensive suite of managed training outsourcing services including Curriculum Design and Content Development, Learning Administration, Learning Delivery, Strategic Sourcing, and Learning Technology.</p>
+
+<button class="btn btn-info btn-lg" id="bt">button 1</button>
+<button class="btn btn-info btn-lg" id="bt2">button 2</button>
+</div>
+
+</body>
+</html>
