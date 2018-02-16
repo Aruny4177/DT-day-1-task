@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.niit.Dao.CategoryDao;
+import com.niit.Dao.ProductDao;
 import com.niit.Dao.SupplierDao;
 import com.niit.model.Category;
 import com.niit.model.Product;
@@ -20,13 +21,27 @@ public class AdminController {
     CategoryDao cardao;
 	@Autowired
 	SupplierDao supdao;
+	@Autowired
+	ProductDao prodao;
 @RequestMapping("/Product")
 public ModelAndView Product()
 {
+	Product pro=new Product();
 	ModelAndView andView = new ModelAndView("product");
-	andView.addObject("p", new Product());
+	andView.addObject("p",pro);
 	return andView;
 }
+@RequestMapping(value="/AddPro",method=RequestMethod.POST )
+public ModelAndView AddPro(Product p)
+{
+	Product pro=new Product();
+	ModelAndView pro1=new ModelAndView("product");
+	pro1.addObject("pro",pro);
+	prodao.insertproduct(pro);
+	return pro1;
+}
+
+
 
 @RequestMapping("/category")
 public ModelAndView Category()

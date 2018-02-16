@@ -3,6 +3,7 @@ package com.niit.Daoimpl;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,8 +20,9 @@ public class ProductDaoImpl implements ProductDao{
 
 	@Override
 	public void insertproduct(Product product) {
-		session.getCurrentSession().persist(product);
 		// TODO Auto-generated method stub
+		session.getCurrentSession().persist(product);
+		
 		
 	}
 
@@ -53,7 +55,6 @@ public class ProductDaoImpl implements ProductDao{
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
-	
+
 	
 }

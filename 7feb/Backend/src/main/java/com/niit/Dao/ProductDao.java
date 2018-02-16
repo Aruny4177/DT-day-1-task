@@ -15,5 +15,4 @@ public interface ProductDao {
 	void updateProdct(Product pro);
 	public Product getProdcutById(int id);
 	
-
 }

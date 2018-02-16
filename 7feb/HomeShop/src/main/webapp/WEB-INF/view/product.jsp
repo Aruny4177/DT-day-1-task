@@ -15,6 +15,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <title>Product</title>
 </head>
 <body>
@@ -24,7 +26,7 @@
 			<div class="row main">
 				<div class="main-login main-center">
 				<h1>PRODUCT ADD</h1>
-					<form:form modelAttribute="p" class="" method="post" action="#">
+					<form:form modelAttribute="p" class="" method="post" action="AddPro">
 						
 						<div class="form-group">
 							<label for="name" class="cols-sm-2 control-label">Product Name</label>
@@ -65,6 +67,17 @@
 								</div>
 							</div>
 						</div>
+						
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Product Description</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<form:input path="brand" type="text" class="form-control" name="password" id="password"  placeholder="Enter your Product Description"/>
+								</div>
+							</div>
+						</div>
+						
 						<div class="form-group ">
 							<input target="_blank" type="submit" id="button" value="Product Add" class="btn btn-primary btn-lg btn-block login-button"></a>
 						</div>
@@ -90,6 +103,15 @@
           <th>Product Supplier</th>
           
         </tr>
+        
+         <c:forEach items="${P}" var="da">
+       <tr>
+       <td>${da.CatID}</td>
+       <td>${da.SubCat}</td>
+       </tr>
+       
+       </c:forEach> -
+     
       </thead>
       <tbody>
        

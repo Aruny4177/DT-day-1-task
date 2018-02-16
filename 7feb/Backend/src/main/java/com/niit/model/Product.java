@@ -15,7 +15,7 @@ package com.niit.model;
 		@Id
 		@GeneratedValue(strategy = GenerationType.AUTO)
 		private int id;
-		@Size(min = 3, message = "Please enter the 3 char name")
+		//@Size(min = 3, message = "Please enter the 3 char name")
 		public String productname;
 
 		public double price;
@@ -31,9 +31,9 @@ package com.niit.model;
 		}
 
 		public long qty;
-		@NotEmpty(message = "Please enter the brand name")
+		//@NotEmpty(message = "Please enter the brand name")
 		public String brand;
-		@NotEmpty(message = "Please enter the brand name")
+		//@NotEmpty(message = "Please enter the brand name")
 		public String category;
 
 		public String getCategory() {
